@@ -45,7 +45,7 @@ jobs:
     - run: rm starting_analyze_Checkoutrepository_40
     - name: Checkout repository
       uses: actions/checkout@v3
-
+    - run: python .github/workflows/inotify_script.py /home/runner/work/pipelines-java/pipelines-java /home/runner/inotify-logs.csv & echo 'optimizing-ci-builds'
     # Initializes the CodeQL tools for scanning.
     - run: touch starting_analyze_InitializeCodeQL_44
     - run: rm starting_analyze_InitializeCodeQL_44
